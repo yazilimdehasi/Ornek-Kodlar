@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: rgb(144, 178, 207);
+}
+.title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.container {
+    color: #000;
+    background: #fff;
+    border-radius: 16px;
+    padding: 40px;
+    width: 600px;
+    box-shadow: 8px 8px 16px rgba(0,0,0,0.1);
+}
+.progress-container {
+    display: flex;
+    margin: 20px;
+    align-items: center;
+}
+.name {
+    width: 160px;
+    font-size: 1.2em;
+}
+.progress {
+    flex: 1;
+    height: 12px;
+    border-radius: 8px;
+    background: rgb(240, 240, 240);
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.1);
+}
+.progress-width {
+    height: 12px;
+    width: 0;
+    border-radius: 8px;
+    display: inline-block;
+    position: relative;
+    animation: 1s ease-out forwards;
+}
+.progress-width::after {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    right: -10px;
+    top: -6px;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 4px rgba(0,0,0,0.1);
+}
+.html {
+    animation-name: slideHTML;
+    background: rgb(255, 51, 0);
+}
+.html::after {
+    border: 2px solid rgb(255, 51, 0);
+}
+.css {
+    animation-name: slideCSS;
+    background: rgb(0, 128, 255);
+}
+.css::after {
+    border: 2px solid rgb(0, 128, 255);
+}
+.javascript {
+    animation-name: slideJS;
+    background: rgb(7, 221, 0);
+}
+.javascript::after {
+    border: 2px solid rgb(7, 221, 0);
+}
+@keyframes slideHTML {
+    to {
+        width: 95%;
+    }
+}
+@keyframes slideCSS {
+    to {
+        width: 70%;
+    }
+}
+@keyframes slideJS {
+    to {
+        width: 80%;
+    }
+}
